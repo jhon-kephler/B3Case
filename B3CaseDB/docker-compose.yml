@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: postgres_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: B3C@se
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./B3CaseDB.sql:/docker-entrypoint-initdb.d/B3CaseDB.sql
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@b3case.com
+      PGADMIN_DEFAULT_PASSWORD: B3C@se
+    ports:
+      - "8080:80"

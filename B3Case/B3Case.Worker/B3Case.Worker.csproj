@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-B3Case.Worker-695ee410-858b-48c2-a8d9-0cc1c4d8307c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\B3Case.Application\B3Case.Application.csproj" />
+    <ProjectReference Include="..\B3Case.Infrastructure\B3Case.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
